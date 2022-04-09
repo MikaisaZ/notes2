@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            background-color: yellow;
+            text-align: justify;
+            /*padding只设置一个值表示上下左右内边距的大小
+                            设置两个值表示上下，左右内边距的大小
+                            设置三个值表示上 左右 下 内边距的大小
+                            设置四个值表示上 右 左 下(顺时针) 内边距的大小*/
+            /* padding是不能设置为负数的，不会报错但是也不会生效 */
+            padding:10px 20px 30px 40px;
+            /* 为了更好的设置不同方向上的内边距，css提供了padding-top/right/bottom/left属性 */
+
+            /* 列表属性就是默认padding-left值为30.因此我们可以通过设置该项为0的方式取消 */
+            
+            
+        }
+        ul{
+            padding-left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum est ipsam veniam quas, dolor obcaecati, voluptatum harum ipsa ab repudiandae, nisi aperiam. Mollitia eligendi laborum accusamus vero nulla necessitatibus?
+    </div>
+
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+</body>
+</html>

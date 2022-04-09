@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 600px;
+            height: 600px;
+            border: 1px black solid;
+            box-sizing: border-box;
+            display: flex;
+            margin: 0 auto;
+        }
+        /* flex盒子可以通过给子项设置flex值的方式，通过分数的方式平分空间。比如这里，就是child1和child2各占2/10，child2占6/10 */
+        .child1,.child3{
+            flex: 2;
+            background-color: yellow;
+        }
+        .child2{
+            flex: 6;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+    </div>
+</body>
+</html>

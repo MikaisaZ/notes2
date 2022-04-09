@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 复习: 空格表示选择后面的后代(包括孙子辈等),>可以选择亲儿子节点 */
+        /* "+"可以选择后面的第一个兄弟节点。比如本例中就是给.l1后面的li添加属性 */
+        .l1+li{
+            background-color: yellow;
+        }
+        /* ~可以给后面所有的兄弟节点加属性 */
+        .l1+li~li{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="l1">123123</li>
+        <li>123123</li>
+        <li>123123</li>
+        <li>123123</li>
+        <li>123123</li>
+    </ul>
+</body>
+</html>

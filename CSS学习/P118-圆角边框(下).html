@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin: 0 auto;
+            /* 这样去写就代表着，/前的是水平方向上的，后面的是垂直方向上的
+                不过注意，这种写法不能单独写给某个边角，比如border-top-left-radius:30px/60px这种写法就是不支持的
+                想要实现可以用类似于30px 30px 30px 30px/60px 60px 60px 60px的方式给各个角设置不同的角度 */
+            border-radius: 30px/60px;
+        }
+        .box{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            /* 通过下面的方式可以完成一个半圆形的div。只需左上右上裁切掉和height一样的大小,左下右下不裁切即可实现 */
+            /* 要注意半圆只能用长方形实现,也可以用左下右下裁切，左上右上不裁切。所生成的半圆只是方向不同 */
+            border-radius: 50px 50px 0px 0px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* 正方形通过只裁切掉一个角，其他角不裁切的方式即可实现扇形 */
+            border-radius: 100px 0px 0px 0px;
+        }
+        /* 另外，长方形元素不建议使用百分比的方式裁切，因为会导致宽高裁切大小不一致。会很难看     */
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="box">我是一个半圆</div>
+    <div class="box2">我是一个扇形</div>
+</body>
+</html>

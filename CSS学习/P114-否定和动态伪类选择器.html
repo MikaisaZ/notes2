@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :not可以用于否定,实例如下,否定掉第一个子元素，则意味着要把除第一个子元素外的所有子元素都加上样式 */
+        ul li:not(:first-child){
+            background-color: rebeccapurple;
+        }
+        /* :link表示链接还未被访问时
+            :visited表示链接已经被访问过
+            :active表示目标元素被激活
+            :hover表示鼠标在目标元素上停留时。
+        以上四个都多用于锚点，不过其他元素也一样可以使用。由于前面已经示例过很多次，这里不在演示*/
+    </style>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+</body>
+</html>

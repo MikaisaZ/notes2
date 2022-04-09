@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* list-style-type表示每个li项前面的标识符,默认是disc实心圆,可取值:circle空心圆，square实心正方形，none表示没有,常用none */
+        /* list-style-image:url();表示用图片去表示每一个li前面的标识符,也可以写在li的css里，表示每个li项前的图片不一样 */
+        /* list-style-position表示标识符相对于li的位置，outside表示在li外面，inside表示标识符在li里面 */
+        ul{
+            list-style-type: square;
+            /* list-style-image: url(../img/cxk.gif); */
+        }
+        li{
+            border:1px solid red ;
+            list-style-position: outside;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+    </ul>
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* background-color用于设置背景色，可以是rgb调色盘，也可以是十六进制，也可以是英文单词 */
+        /* background-image:url()用于设置背景图片,但是由于图片大小可能与盒子不同，因此会出现重复或者裁剪问题
+            这时我们就要引入backgound-repeat属性,no-repeat表示不重复,repeat-x表示水平方向上重复,同理repeat-y
+            表示垂直方向上重复。 */
+        /* background-position用来表示背景图片相对于盒子的位置。值可以取数字也可以取单词。
+            举例：10px 10px表示图片从距离盒子左侧10px，上侧10px的地方开始显示(同理也可以用百分比)
+                         center center表示图片在水平和垂直方向上都居中显示
+                       left bottom表示图片在左下角显示(同理可以取right，top表示右上) */
+        /* background-size可以设置背景图片的大小，取值可以是px也可以是百分比也可以是单词
+            cover表示覆盖，即等比放大后显示，但可能会导致裁切
+            contain表示自适应，但是可能会留白边 */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .box2{
+            background-color:aquamarine;
+        }
+        .box3{
+            text-align: center;
+            width: 600px;
+            height: 600px;
+            background-color: yellow;
+            background-image: url(../img/cxk.gif);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .box4{
+            text-align: center;
+            width: 600px;
+            height: 600px;
+            background-color: blue ;
+            background-image: url(../img/cxk.gif);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        我是一个盒子
+        <div class="box2">我是那个盒子的儿子</div>
+    </div>
+    <div class="box3">我也是一个盒子</div>
+    <div class="box4">我还是一个盒子</div>
+</body>
+</html>

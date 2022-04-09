@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :target官方解释为选择匹配的所有元素，且匹配元素被相关url指向 */
+        /* 结合前面所说的锚点知识，可以做一个简单的案例。本例中就是点到那个锚点，锚点对应的元素就会显示 */
+        div div{
+            display: none;
+        }
+        div div:target{
+            display: block;
+        }
+
+        a{
+            text-decoration: none;
+            background-color: black;
+            color: white;
+        }
+        a:hover{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#aaa">aaa</a>
+        <div id="aaa">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure optio fugiat quae unde cupiditate, eaque vel minima cum! Porro dolor molestias quaerat nemo maiores, est repudiandae excepturi mollitia minima laborum.
+        </div>
+    </div>
+    <div>
+        <a href="#bbb">bbb</a>
+        <div id="bbb">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure optio fugiat quae unde cupiditate, eaque vel minima cum! Porro dolor molestias quaerat nemo maiores, est repudiandae excepturi mollitia minima laborum.
+        </div>
+    </div>
+    <div>
+        <a href="#ccc">ccc</a>
+        <div id="ccc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure optio fugiat quae unde cupiditate, eaque vel minima cum! Porro dolor molestias quaerat nemo maiores, est repudiandae excepturi mollitia minima laborum.
+        </div>
+    </div>
+</body>
+</html>

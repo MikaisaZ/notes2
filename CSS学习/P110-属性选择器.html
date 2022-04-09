@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 所谓属性选择器，就是通过元素的属性和对应的值找到该元素。比如下面就能精准定位到type为text的input标签 */
+        /* 除了=，还有很多符号
+            ~=表示包含
+            ^=xx表示以xx开头的
+            $=xx表示以xx结尾的
+            *=xx表示包含xx的 */
+        input[type=text]{
+            background-color: yellow;
+        }
+
+        /* 选择type值中以p开头的input标签，这里只有password满足 */
+        input[type^=p]{
+            background-color: green;
+        }
+
+        /* 选择type值中以r结尾的input标签，这里只有number满足 */
+        input[type$=r]{
+            background-color: red;
+        }
+
+        /* 选择type值中包含ma的input标签，这里只有email满足 */
+        input[type*=ma]{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        用户名：<input type="text"><br>
+        密码：<input type="password"><br>
+        年龄：<input type="number"><br>
+        邮 箱：<input type="email"><br>
+    </div>
+</body>
+</html>

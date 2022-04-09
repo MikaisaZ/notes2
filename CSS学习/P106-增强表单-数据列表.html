@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 数据列表其实就是类似于百度的搜索框，打字上去会出提示列表 -->
+    <!-- 注意要用input的list属性与datalist中的id对应起来，否则没法联动 -->
+    <input type="search" list="myList">
+    <datalist id="myList">
+        <option value="手机"></option>
+        <option value="电脑"></option>
+        <option value="耳机"></option>
+        <option value="平板"></option>
+    </datalist>
+</body>
+</html>

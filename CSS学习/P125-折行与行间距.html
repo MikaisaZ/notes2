@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            display: flex;
+            /* 前面只说到了弹性盒子的主副轴和对齐方式。有一点没有说，就是弹性盒子默认是不换行的。
+                也就是说哪怕宽度不够用了，它也会通过"挤一挤"的方式在一行显示。 */
+            /* 可以用flex-wrap:wrap的方式让它自动换行 */
+            flex-wrap: wrap;
+            /* 但是设置完自动换行后，行是自动换了，但是出现了行间距过大的问题，因为弹性盒子是会把空白部分等间距分割 */
+            /* align-content可用于控制折行后的行间距
+                flex-start  
+                flex-end
+                center
+                space-around
+                space-between*/
+            align-content: flex-start;
+        }
+        .box>div{
+            width: 100px;
+            height: 100px;
+            border: 1px dotted red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>你</div>
+        <div>看</div>
+        <div>我</div>
+        <div>换</div>
+        <div>行</div>
+        <div>了</div>
+        <div>啊</div>
+        <div>！</div>
+    </div>
+</body>
+</html>

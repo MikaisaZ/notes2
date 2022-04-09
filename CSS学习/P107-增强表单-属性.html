@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <!-- autofocus表示页面加载完成即自动聚焦，节省了用户手动选中的时间  -->
+            <!-- required表示为必填项 -->
+            <!-- pattern表示输入内容需要遵循的正则表达式，本例表示第一个字符要在0-9之间，第二个要在a-z之间，第三个在A-Z之间 -->
+            用户名：<input type="text" autofocus required pattern="[0-9][a-z][A-Z]">
+        </div>
+        <div>
+            <!-- multiple表示能否选择多个，多用于下拉列表，不过邮箱里也可以，但是不建议 -->
+            电子邮件：<input type="email" required multiple>
+        </div>
+        <div>
+            <input type="submit" value="提交">
+        </div>
+    </form>
+</body>
+</html>

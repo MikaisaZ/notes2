@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 背景的复合属性即同时使用了background和background-xxx属性。这时只有background属性里的东西会生效，background-xxx
+            根本没有被加载.比如下面这个例子，运行后会发现背景色这个属性根本没有被加载进去 */
+        .box1{
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            background: fixed url(../img/cxk.gif);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+</body>
+</html>

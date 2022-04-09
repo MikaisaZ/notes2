@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 如果是两个兄弟关系的盒子或者两个父子关系的盒子，他们之间的外边距会怎么作用呢? */
+        /* 兄弟关系:1.垂直方向上,会取较大的那个值。比如下面的box1和box2，就会取box2的40px
+                           2. 水平方向上会进行合并处理，比如下面的box3和box4就会50+40=90px
+            父子关系:1.对儿子盒子进行的margin属性会连着父盒子一起生效.如果想避免，可以在父盒子上设置
+                           padding，不过要注意，padding是会计算到盒子的宽高的。因此父亲盒子会自动增高(宽)
+                           增加的就是你设置的padding，因此要在父盒子里减去相应的宽(高).
+                           比如下面的father和son，son的margin-top会在father上同时生效，
+                           而father 的padding-top可以让son向下移动100px，但是同时father会增高100px
+                           所以需要把father的height减少100px才能恢复原来的高度
+                           2.给父盒子设置边框,即可让子元素的margin生效，但是注意border也会计算宽高,
+                              注意在宽高里面减去对应大小
+                            3.给父或者子元素设置浮动，注意只需要给父与子其中一个设置就行了
+                            4.给父元素设置overflow:hidden即可(更推荐这种)*/
+        /* 总结:子元素的margin会传递给父元素，兄弟元素中垂直方向上的margin会取较大值，而水平方向上会加一起   */
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: greenyellow;
+            margin-bottom: 10px;
+        }
+        .box2{
+            background-color: aqua;
+            margin-top: 40px;
+        }
+        .box3{
+            background-color: blue;
+            float: left;
+            margin-right: 50px;
+        }
+        .box4{
+            background-color: purple;
+            float: left;
+            margin-left: 40px;
+        }
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: brown;
+            clear: both;
+            overflow: hidden;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+            clear: both;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+    <div class="box4"></div>
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 补充，:root可以用来代替html，表示根节点。html的根节点就是html */
+        :root,body{
+            height: 100%;
+        }
+        /* 指定大儿子或者最小的儿子，并为之添加属性 */
+        ul li:first-child{
+            background-color: yellow;
+        }
+        ul li:last-child{
+            background-color: red;
+        }
+
+        /* 也可以通过这种方式选中第几个儿子，也可以逗号隔开选择多个 */
+        ul li:nth-child(2),ul li:nth-child(3){
+            background-color: brown;
+        }
+
+        /* 也可以通过这种方式选择所有奇数儿子或偶数儿子。2n为偶数，2n+1或2n-1位奇数
+            另外偶数可以用even表示。奇数可以用odd表示 */
+        ul li:nth-child(even){
+            color: blue;
+        }
+        ul li:nth-child(odd){
+            color: green;
+        }
+
+        /* only-child表示该子节点为独生子女，比如本例中，有两个div下都有p。这时我们选择的是那个是"独生子女"的p */
+        div p:only-child{
+            background-color: aqua;
+        }
+
+        /* empty用于选择没有内容的目标元素，比如这里就会选择最下面的div，注意，没有内容是指连空格回车都不行 */
+        div:empty{
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+    </ul>
+    <div>
+        <p>我是哥哥</p>
+        <p>我是弟弟</p>
+    </div>
+    <div>
+        <p>我是独生子女</p>
+    </div>
+    <div></div>
+</body>
+</html>

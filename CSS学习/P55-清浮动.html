@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* float虽然好用，但是他会导致当前元素浮动起来不计算高度，所以会影响后续不需要float的元素 。
+            我们在后续的无需float的元素设置clear属性去清除前面的浮动效果，取值left表示清除左侧排列的浮动，
+            right同理，both表示清除各方向的浮动*/
+        /* 第二种清除浮动的方式是，用一个新的div把所有需要浮动的元素们装进去，并设置好高度，不需要float的元素在这个div外面写就行了 */
+        /* 第三种方法与第二种差不多，也是用个新的div，但是无需设置高度，只需设置overflow属性为hidden，即可清除浮动
+            让当前div里面的所有float元素重新计算高度 */
+        /* 最后一种比较暴力，就是用新div包进去，然后直接把高度写死  */
+        .box1,.box2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
+        .box1{
+            background-color: green;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

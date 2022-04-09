@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 状态为类选择器多用于form表单中，下面是详解
+            :enabled匹配所有用户界面(form表单)中处于可用状态的元素
+            :disabled匹配所有用户界面(form表单)中处于不可用状态的元素
+            :checked匹配所有用户界面(form表单)中处于选中状态的元素
+            ::selection匹配元素中被用户选中或处于高亮状态的部分。多用于文字 */
+        input:enabled{
+            background-color: rebeccapurple;
+        }
+        input:disabled{
+            background-color: blue;
+        }
+        input[type=checkbox]{
+            appearance: none;
+        }
+        input:checked{
+            background-color: red;
+        }
+        input:focus{
+            background-color: red;
+        }
+
+        /* 注意有两个冒号 */
+        p::selection{
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        用户名:<input type="text"><br>
+        密   码:<input type="password"><br>
+        记住用户名:<input type="checkbox"><br>
+        <input type="submit" value="提交"><br>
+    </form>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, animi maxime sapiente similique cum recusandae eligendi et quasi cupiditate reiciendis ipsa amet eius quisquam distinctio modi. Tempora quidem ab et?</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* background-attachment属性用来表示背景图片的固定与滚动，默认值是scroll即随浏览器滚动条滚动
+            但是如果设置成fixed则表示背景图片的所有属性都变成了相对于浏览器的，这时无论你怎么拉滚动条，图片都在那里固定着 */
+        .box1{
+            text-align: center;
+            width: 600px;
+            height: 1000px;
+            background-color: yellow ;
+            background-image: url(../img/cxk.gif);
+            background-repeat: no-repeat;
+            background-size: 200px 200px;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        我是一个盒子
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        header,footer{
+            text-align: center;
+            line-height: 100px;
+            width: auto;
+            height: 100px;
+            background-color: orange;
+        }
+        section{
+            width: auto;
+            height: calc(100% - 200px);
+            background-color: green;
+        }
+        nav,aside{
+            float: left;
+            width: 100px;
+            height: 100%;
+            background-color: gray;
+        }
+        main{
+            height: 100%;
+            background-color: yellow;
+            float: left;
+            width: calc(100% - 200px);
+        }
+        main article{
+            height: 50%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <section>
+        <nav>
+            <figure>nav</figure>
+        </nav>
+        <main>
+            <article>
+                <header>article-header</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur numquam ex debitis dolore odio temporibus possimus, alias explicabo id enim praesentium atque, error provident, assumenda vel ipsa beatae perferendis ea!</p>
+                <footer>article-footer</footer>
+            </article>
+            <article>
+                <header>article-header</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur numquam ex debitis dolore odio temporibus possimus, alias explicabo id enim praesentium atque, error provident, assumenda vel ipsa beatae perferendis ea!</p>
+                <footer>article-footer</footer>
+            </article>
+        </main>
+        <aside>
+            <figure>aside</figure>
+        </aside>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>

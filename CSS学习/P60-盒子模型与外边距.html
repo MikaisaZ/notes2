@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .box1{
+            background-color: yellow;
+            margin:10px  20px 30px 40px;
+        }
+        .box2{
+            /* 同样，margin也支持分别在top,left,right,bottom方向去写 */
+            /* 常用的有*{margin:0},并且margin支持负值 */
+            /* 另外，快速横向居中可以直接margin:0 auto(上下可以自己设置，左右直接auto自动居中.注意垂直方向上的auto是没用的) */
+            background-color: red;  
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left:40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
